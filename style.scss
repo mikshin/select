@@ -1,0 +1,70 @@
+.select {
+    &.select--old {
+        // display: none;
+        // visibility: hidden;
+        pointer-events: none;
+        height: 50px;
+        width: 200px;
+    }
+}
+
+.select-list {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    list-style-type: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    .option {
+        cursor:pointer;
+        transition: .3s all ease;
+        
+        &.selected {
+            background-color: blue;
+        }
+        &:hover {
+            background-color: tomato;
+        }
+    }
+}
+
+.select-container {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    &.select-container--open {
+        .select-list {
+            display: block;
+        }
+    }
+}
+
+.select-input {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.select-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+
+
+// удалить
+.select {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(200%);
+}
+.select-list  {
+    // transform: translateX(100%)
+}
